@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="143108" started-at="2018-03-20T16:32:38Z" finished-at="2018-03-20T16:35:01Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="143108" started-at="2018-03-20T16:32:38Z" finished-at="2018-03-20T16:35:01Z">
+      <class name="com.emr.qa.testcases.LoginPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.emr.qa.testcases.LoginPageTest@5e3a8624]" name="setUp" is-config="true" duration-ms="20000" started-at="2018-03-20T16:32:38Z" finished-at="2018-03-20T16:32:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="EMRLogoImageTest()[pri:0, instance:com.emr.qa.testcases.LoginPageTest@5e3a8624]" name="EMRLogoImageTest" duration-ms="6023" started-at="2018-03-20T16:32:58Z" finished-at="2018-03-20T16:33:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EMRLogoImageTest -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.emr.qa.testcases.LoginPageTest@5e3a8624]" name="teardown" is-config="true" duration-ms="1133" started-at="2018-03-20T16:33:04Z" finished-at="2018-03-20T16:33:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.emr.qa.testcases.LoginPageTest@5e3a8624]" name="setUp" is-config="true" duration-ms="16580" started-at="2018-03-20T16:33:05Z" finished-at="2018-03-20T16:33:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="LoginPagetitletest()[pri:0, instance:com.emr.qa.testcases.LoginPageTest@5e3a8624]" name="LoginPagetitletest" duration-ms="49" started-at="2018-03-20T16:33:21Z" finished-at="2018-03-20T16:33:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginPagetitletest -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.emr.qa.testcases.LoginPageTest@5e3a8624]" name="teardown" is-config="true" duration-ms="1083" started-at="2018-03-20T16:33:21Z" finished-at="2018-03-20T16:33:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.emr.qa.testcases.LoginPageTest@5e3a8624]" name="setUp" is-config="true" duration-ms="13513" started-at="2018-03-20T16:33:23Z" finished-at="2018-03-20T16:33:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="LoginTest()[pri:0, instance:com.emr.qa.testcases.LoginPageTest@5e3a8624]" name="LoginTest" duration-ms="9828" started-at="2018-03-20T16:33:36Z" finished-at="2018-03-20T16:33:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginTest -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.emr.qa.testcases.LoginPageTest@5e3a8624]" name="teardown" is-config="true" duration-ms="1127" started-at="2018-03-20T16:33:46Z" finished-at="2018-03-20T16:33:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.emr.qa.testcases.LoginPageTest@5e3a8624]" name="setUp" is-config="true" duration-ms="14268" started-at="2018-03-20T16:33:47Z" finished-at="2018-03-20T16:34:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="forgotpintextTest()[pri:0, instance:com.emr.qa.testcases.LoginPageTest@5e3a8624]" name="forgotpintextTest" duration-ms="5326" started-at="2018-03-20T16:34:01Z" finished-at="2018-03-20T16:34:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- forgotpintextTest -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.emr.qa.testcases.LoginPageTest@5e3a8624]" name="teardown" is-config="true" duration-ms="1380" started-at="2018-03-20T16:34:07Z" finished-at="2018-03-20T16:34:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.emr.qa.testcases.LoginPageTest@5e3a8624]" name="setUp" is-config="true" duration-ms="17242" started-at="2018-03-20T16:34:08Z" finished-at="2018-03-20T16:34:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="resetpasswordtextTest()[pri:0, instance:com.emr.qa.testcases.LoginPageTest@5e3a8624]" name="resetpasswordtextTest" duration-ms="8727" started-at="2018-03-20T16:34:25Z" finished-at="2018-03-20T16:34:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetpasswordtextTest -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.emr.qa.testcases.LoginPageTest@5e3a8624]" name="teardown" is-config="true" duration-ms="1203" started-at="2018-03-20T16:34:34Z" finished-at="2018-03-20T16:34:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.emr.qa.testcases.LoginPageTest@5e3a8624]" name="setUp" is-config="true" duration-ms="18016" started-at="2018-03-20T16:34:35Z" finished-at="2018-03-20T16:34:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="retrievepasswordtextTest()[pri:0, instance:com.emr.qa.testcases.LoginPageTest@5e3a8624]" name="retrievepasswordtextTest" duration-ms="6068" started-at="2018-03-20T16:34:53Z" finished-at="2018-03-20T16:34:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- retrievepasswordtextTest -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.emr.qa.testcases.LoginPageTest@5e3a8624]" name="teardown" is-config="true" duration-ms="1425" started-at="2018-03-20T16:34:59Z" finished-at="2018-03-20T16:35:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.emr.qa.testcases.LoginPageTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
