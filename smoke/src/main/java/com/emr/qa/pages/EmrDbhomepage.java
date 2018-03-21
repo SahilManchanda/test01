@@ -68,7 +68,7 @@ public class EmrDbhomepage {
 	
 
 
-	// My EMR DB User Center Panel
+	// My EMR DB User Centre Panel
 
 	
 		@FindBy(xpath="//a[@href='/applications']")
@@ -123,7 +123,7 @@ public class EmrDbhomepage {
 //Capacity Market side icon
 		
 		@FindBy(xpath="/html/body/form/div[6]/div/div[3]/table/tbody/tr/td[1]/div/div/ul[2]/li[8]/div[1]/div")
-		WebElement CapacityMarketsideicon;
+		WebElement CapacityMarketsidecision;
 		
 		@FindBy(xpath=" //a[contains(text(), \"Primary Fuel Type\")]")
 		WebElement Primaryfueltypecollapsed;
@@ -186,6 +186,15 @@ public class EmrDbhomepage {
 	
 		 
 		 
+		//Methods
+		
+		Auctionpage Navigatetoauctionsetup() {
+		
+			CapacityMarketsidecision.click();	
+			AuctionSetupcollapsed.click();
+			return new Auctionpage();
+	
+		}
 		
 		
 		

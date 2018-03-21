@@ -7,6 +7,8 @@ import com.emr.qa.base.TestBase;
 
 public class Auctionpage extends TestBase {
 	
+	EmrDbhomepage emrhomepage;
+	
 	
 	//Auction text
 	
@@ -24,9 +26,7 @@ public class Auctionpage extends TestBase {
 	@FindBy(xpath="//a[@id='diidSort2Modified']")
 	WebElement modifiedsort;
 		
-///////////////////////////////////////////////////////////////////////////////////////////////////////		
-		
-	//Auction Dates
+
 	
 	
 	
@@ -50,6 +50,13 @@ public class Auctionpage extends TestBase {
 	
 	@FindBy(id="AuctionPriceVariableType_61b4ce73-8fed-414c-bed8-ac3846241b35_$DropDownChoice")
 	WebElement AuctionPriceVariableType;
+	
+	
+	
+///////////////////////////////////////////////////////////////////////////////////////////////////////		
+	
+//Auction Dates
+	
 	
 	//AuctionStartDate
 	
@@ -137,49 +144,49 @@ public class Auctionpage extends TestBase {
 	@FindBy(id="ConfLengthSDNewBUR_e8e8b563-4912-439c-a724-e023006ed11c_$DateTimeFieldDate")
 	WebElement ConfLengthSDNewBUR;	
 
-	//ConfLengthEDNewBUR
+	//Confirm entry & Fix Agreement Length End Date (New Builds and Refurbs only)
 	
 	@FindBy(id="ConfLengthEDNewBUR_0049c2dd-bc86-4d51-b46d-4f98814eb60c_$DateTimeFieldDate")
 	WebElement ConfLengthEDNewBUR;	
 	
-	//ConfLengthSDPR
+	//Confirm entry & Fix Agreement Length Start Date (Pre-Refurbs only) 
 	
 	@FindBy(id="ConfLengthSDPR_c85a9463-1aa3-471f-bd01-b175e56c00dd_$DateTimeFieldDate")
 	WebElement ConfLengthSDPR;	
 		
 	
-	//ConfLengthEDPR
+	//Confirm entry & Fix Agreement Length End Date (Pre-Refurbs only)
 	
 	@FindBy(id="ConfLengthEDPR_4c9fa979-95f9-493c-84aa-b6740819e5de_$DateTimeFieldDate")
 	WebElement ConfLengthEDPR;	
 	
 	
-	//ConApprovedAppRD
+	//Conditionally Approved Application Results Date
 	
 	@FindBy(id="ConApprovedAppRD_c41ea80c-ca98-4911-a2d9-3d1ee3f86e47_$DateTimeFieldDate")
 	WebElement ConApprovedAppRD;	
 	
-	//PlanConsentRD
+	//Planning Consent Result Date 
 	
 	@FindBy(id="PlanConsentRD_c24fe707-7fab-4aaa-bfe7-7bb22af06216_$DateTimeFieldDate")
 	WebElement PlanConsentRD;
 	
-	//LastDSubmitCCPQRD
+	//Last Date to Submit Credit Cover following PQRD 
 	
 	@FindBy(id="LastDSubmitCCPQRD_07712e5f-c505-4450-955c-b3ee7e9bdfa4_$DateTimeFieldDate")
 	WebElement LastDSubmitCCPQRD;
 	
-	//LastDSubmitPCFPQRD
+	//Last Date to submit Planning Consent following PQRD 
 	
 	@FindBy(id="LastDSubmitPCFPQRD_1da36a30-ee69-47fb-b0dd-ad8d18580c60_$DateTimeFieldDate")
 	WebElement LastDSubmitPCFPQRD;
 	
-	//AuctionRDayARD
+	//Auction Results Day (ARD) 
 	
 	@FindBy(id="AuctionRDayARD_f5f85108-28cb-49d0-8eaa-385e95facaa3_$DateTimeFieldDate")
 	WebElement AuctionRDayARD;
 	
-	//CapAgrNoticeCANRCRD
+	//Capacity Agreement Notice (CAN) Release Day (CRD)
 	
 	@FindBy(id="CapAgrNoticeCANRCRD_69a8f1de-61cb-4407-833f-83c7036fabbd_$DateTimeFieldDate")
 	WebElement CapAgrNoticeCANRCRD;
@@ -224,60 +231,68 @@ public class Auctionpage extends TestBase {
 	
 	
 	
-	//DefMeteringADD
+	//Deferred Metering Assessment Due Date
 		
 	@FindBy(id="DefMeteringADD_06ed3811-db1f-46c3-a958-840eeaff76a4_$DateTimeFieldDate")
 	WebElement DefMeteringADD;
 	
 	
-	//DSRProvingTDPP
+	//DSR Proving Test date (prior to prequal)
 		
 	@FindBy(id="DSRProvingTDPP_e40cfaeb-e5cf-4fc5-9fdd-917602ec899c_$DateTimeFieldDate")
 	WebElement DSRProvingTDPP;
 	
 	
 	
-	//DSRProvingTDACAN
+	//DSR Proving Test date (after CAN)
 		
 	@FindBy(id="DSRProvingTDACAN_909d550d-dd38-4919-8d81-ac6ce5f66acb_$DateTimeFieldDate")
 	WebElement DSRProvingTDACAN;
 	
-	//FinComMFCMDate
+	//Financial Commitment milestone (FCM) date
 	
 	@FindBy(id="FinComMFCMDate_9fd47495-069f-48ac-89f2-48d57621d6b3_$DateTimeFieldDate")
 	WebElement FinComMFCMDate;
 	
 	
-	//FinalSixMP
+	//Final six monthly progress reporting date
 		
 	@FindBy(id="FinalSixMP_970fc02e-f9d0-4031-bd3f-389ac06b6825_$DateTimeFieldDate")
 	WebElement FinalSixMP;
 	
 	
-	//SixMPRD1
+	//Six monthly progress reporting date 1
 		
 	@FindBy(id="SixMPRD1_f2fccc71-8344-48ca-86e9-24bfbaccaec8_$DateTimeFieldDate")
 	WebElement SixMPRD1;
 		
 		
-	//SixMPRD2
+	//Six monthly progress reporting date 2
 		
 	@FindBy(id="SixMPRD2_5774a3a9-dea1-4257-8e0f-70beb6dd1992_$DateTimeFieldDate")
 	WebElement SixMPRD2;
 	
-	//SixMPRD3
+	//Six monthly progress reporting date 3
 	
 	@FindBy(id="SixMPRD3_b5b24f12-9e28-4653-8f91-56c5bad45f85_$DateTimeFieldDate")
 	WebElement SixMPRD3;
 	
 	
-	//SubsComplMSCMDate
+	//Substantial completion milestone (SCM) date
 		
 	@FindBy(id="SubsComplMSCMDate_2239198a-103b-452d-ae5c-98d3f0b538e1_$DateTimeFieldDate")
 	WebElement SubsComplMSCMDate;
 		
+	
+	//SProvision of deferred connection agreements date
+	
+	@FindBy(id="ProvDCAD_7be69786-c8c5-4b0c-a1ad-b99a680888dc_$DateTimeFieldDate")
+	WebElement Provisionofdeferredconnectionagreementsdate;
 		
-	//ProvDefTECD
+	
+	
+	
+	//Provision of deferred TEC date
 		
 	@FindBy(id="ProvDefTECD_3ea5d2d9-1e5f-4cbf-895d-9617cb391ef7_$DateTimeFieldDate")
 	WebElement ProvDefTECD;
@@ -288,14 +303,22 @@ public class Auctionpage extends TestBase {
 	@FindBy(id="BasePeriod_4b68d35c-b630-48fd-a2b7-c1b9ee2f0b48_$TextField")
 	WebElement BasePeriod;
 	
+	//Dropdownstatus
+	
+	@FindBy(id="Auction_List_StatusField_-1")
+	WebElement dropdownstatus;
 	
 	
 	
+
 	
+	void AuctionCreation()
+	{
+		
 	
-	
-	
-	
+		
+		
+	}
 	
 	
 	
