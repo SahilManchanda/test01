@@ -7,7 +7,16 @@ import org.openqa.selenium.support.PageFactory;
 import com.emr.qa.base.TestBase;
 
 public class Loginpage extends TestBase{
+
+//	Initialising the Page Objects 
 	
+	public  Loginpage() {
+		
+		PageFactory.initElements(driver, this);
+		
+	}
+		
+	 
 	//pagefactory	
 
 	@FindBy(xpath="//input[@placeholder='UserName']")
@@ -52,14 +61,10 @@ public class Loginpage extends TestBase{
 	@FindBy(xpath="//h1[contains(text(),\"Forgot PIN\")]")
 	WebElement forgotpintext;
 	
+	@FindBy(xpath="//input[@name='btnSMS']")
+	WebElement btnSMS;
 	
 	
-	 public  Loginpage() {
-		
-		PageFactory.initElements(driver, this);
-		
-	}
-		
 	
 	 
 	 //Actions:
@@ -77,15 +82,19 @@ public class Loginpage extends TestBase{
 		
 	}  
 	
-	public Homepage Login(String un, String pswd) {
+	public Homepage Loginuser(String un, String pswd) {
+		System.out.println("1.1 run");
 		loginhomepage.click();
-
+		System.out.println("1.2 run");
 		username.sendKeys(un);
+		System.out.println("1.3 run");
 		password.sendKeys(pswd);
 		
 		Login.click();
 
 		pin.sendKeys("123456");
+		
+		btnSMS.click();
 		
 		return new Homepage();
 		

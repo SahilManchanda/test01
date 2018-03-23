@@ -48,7 +48,7 @@ public class LoginPageTest extends TestBase {
 	@Test	
 	public void LoginTest() {
 	
-	homepage = login.Login("am1a.mainadmin","Passw01!");
+	homepage = login.Loginuser("am1a.mainadmin","Passw01!");
 
 	}
 	

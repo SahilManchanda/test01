@@ -1,14 +1,33 @@
 package com.emr.qa.pages;
 
+import java.io.IOException;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.emr.qa.base.TestBase;
+import com.emr.qa.util.Commonfunction;
 
 public class Auctionpage extends TestBase {
 	
-	EmrDbhomepage emrhomepage;
+
+	public  Auctionpage() {
+		
+		PageFactory.initElements(driver, this);
+		
+	}
 	
+	
+	
+	EmrDbhomepage emrhomepage;
+	Commonfunction cf= new Commonfunction();
 	
 	//Auction text
 	
@@ -308,20 +327,177 @@ public class Auctionpage extends TestBase {
 	@FindBy(id="Auction_List_StatusField_-1")
 	WebElement dropdownstatus;
 	
+	@FindBy(xpath="/html/body/div[5]/div/div[2]/div/div/div/div[2]/input[1]")
+	WebElement popupsave;
 	
+	@FindBy(name="ctl00$ctl50$g_4fe664df_167b_4a3b_9df9_aeed3bb7ff2f$ctl00$toolBarTbl$RightRptControls$ctl00$ctl00$diidIOSaveItem")
+	
+	WebElement save;
+	
+	//Auction Title header
 	
 
+	@FindBy(xpath="//div[@displayname=\"Auction title\"]//following-sibling::div[@class=\"ms-positionRelative\"]//a")
+	WebElement Auctiontitleheader;
 	
-	void AuctionCreation()
+	@FindBy(xpath="//li[@text=\"Show Filter Choices\"]")
+	WebElement ShowFilterChoices;
+	
+	
+	@FindBy(id="diidFilterLinkTitle")
+	WebElement FilterLinkTitle;
+	
+
+	//Methods
+	
+	public void AuctionCreation(WebDriver driver) throws IOException, InterruptedException
 	{
 		
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		
+		//WebElement element = driver.findElement(By.linkText(“Home”));
+		WebDriverWait wait = new WebDriverWait(driver, 20);
+
+		wait.until(ExpectedConditions.visibilityOf(newitem));
+		
+		newitem.click();
+		
+		
+		driver.switchTo().frame(2);
+		 
+		AuctionTitle.sendKeys(new CharSequence[] { cf.accessfromfile(1, 0, 2) });
+		
+		Openingdeliveryyear.sendKeys(new CharSequence[] { cf.accessfromfile(1, 1, 2) });
+		
+		Select dropdown = new Select(AuctionType);
+	    dropdown.selectByVisibleText(cf.accessfromfile(1, 2, 2));
+	    
+	    
+	    Select dropdownpv = new Select(AuctionPriceVariableType);
+	    dropdownpv.selectByVisibleText(cf.accessfromfile(1, 3, 2));
+	    
+	    
+	    AuctionStartDate.sendKeys(new CharSequence[] { cf.accessfromfile(1, 4, 2) });
+	    
+	    AuctionEndDate.sendKeys(new CharSequence[] { cf.accessfromfile(1, 5, 2) });
+	    
+	    PrequalificationOnOpeningDate.sendKeys(new CharSequence[] { cf.accessfromfile(1, 6, 2) });
+	    
+	    PrequalificationOnClosingDate.sendKeys(new CharSequence[] { cf.accessfromfile(1, 7, 2) });
+	    
+	    ProductSelectioNOpenDate.sendKeys(new CharSequence[] { cf.accessfromfile(1, 8, 2) });
+	    
+	    ProductSelectionCloseDate.sendKeys(new CharSequence[] { cf.accessfromfile(1, 9, 2) });
+	    
+	    PreqResultDatePQRD.sendKeys(new CharSequence[] { cf.accessfromfile(1, 10, 2) });
+	    
+	    RaisDispPreqDecDate.sendKeys(new CharSequence[] { cf.accessfromfile(1, 11, 2) });
+	    
+	    AuctionParamUpdateDate.sendKeys(new CharSequence[] { cf.accessfromfile(1, 13, 2) });
+	    
+	    OptOutFixEndDate.sendKeys(new CharSequence[] { cf.accessfromfile(1, 14, 2) });
+	    
+	    PriceMakerTakerReq.sendKeys(new CharSequence[] { cf.accessfromfile(1, 15, 2) });
+	    
+	    PriceMakerTakerFD.sendKeys(new CharSequence[] { cf.accessfromfile(1, 16, 2) });
+	    
+	    PriceMakerStatusConfDate.sendKeys(new CharSequence[] { cf.accessfromfile(1, 17, 2) });
+	    
+	    ConfDSRBidCapSD.sendKeys(new CharSequence[] { cf.accessfromfile(1, 18, 2) });
+	    
+	    ConfDSRBidCapED.sendKeys(new CharSequence[] { cf.accessfromfile(1, 19, 2) });
+	    
+	    ConfLengthSDNewBUR.sendKeys(new CharSequence[] { cf.accessfromfile(1, 20, 2) });
+	    
+	    ConfLengthEDNewBUR.sendKeys(new CharSequence[] { cf.accessfromfile(1, 21, 2) });
+	    
+	    ConfLengthSDPR.sendKeys(new CharSequence[] { cf.accessfromfile(1, 22, 2) });
+	    
+	    ConfLengthEDPR.sendKeys(new CharSequence[] { cf.accessfromfile(1, 23, 2) });
+	    
+	    ConApprovedAppRD.sendKeys(new CharSequence[] { cf.accessfromfile(1, 24, 2) });
+	    
+	    PlanConsentRD.sendKeys(new CharSequence[] { cf.accessfromfile(1, 25, 2) });
+	    
+	    LastDSubmitCCPQRD.sendKeys(new CharSequence[] { cf.accessfromfile(1, 26, 2) });
+	    
+	    LastDSubmitPCFPQRD.sendKeys(new CharSequence[] { cf.accessfromfile(1, 27, 2) });
+	    
+	    AuctionRDayARD.sendKeys(new CharSequence[] { cf.accessfromfile(1, 28, 2) });
+	    
+	    CapAgrNoticeCANRCRD.sendKeys(new CharSequence[] { cf.accessfromfile(1, 29, 2) });
+	    
+	    TerminationFee1.sendKeys(new CharSequence[] { cf.accessfromfile(1, 30, 2) });
+	    
+	    TerminationFee2.sendKeys(new CharSequence[] { cf.accessfromfile(1, 31, 2) });
+	    
+	    TerminationFee3.sendKeys(new CharSequence[] { cf.accessfromfile(1, 32, 2) });
+	    
+	    TerminationFee4.sendKeys(new CharSequence[] { cf.accessfromfile(1, 33, 2) });
+	    
+	    TerminationFee5.sendKeys(new CharSequence[] { cf.accessfromfile(1, 34, 2) });
+	    
+	    MonthlyPenaltyCap.sendKeys(new CharSequence[] { cf.accessfromfile(1, 35, 2) });
+	    
+	    AnnualPenaltyCap.sendKeys(new CharSequence[] { cf.accessfromfile(1, 36, 2) });
+	    
+	    DefMeteringADD.sendKeys(new CharSequence[] { cf.accessfromfile(1, 37, 2) });
+	    
+	    DSRProvingTDPP.sendKeys(new CharSequence[] { cf.accessfromfile(1, 38, 2) });
+
+	    DSRProvingTDACAN.sendKeys(new CharSequence[] { cf.accessfromfile(1, 39, 2) });
+	    
+	    FinComMFCMDate.sendKeys(new CharSequence[] { cf.accessfromfile(1, 40, 2) });
+
+	    FinalSixMP.sendKeys(new CharSequence[] { cf.accessfromfile(1, 41, 2) });
+	   
+	    SixMPRD1.sendKeys(new CharSequence[] { cf.accessfromfile(1, 42, 2) });
+	   
+	    SixMPRD2.sendKeys(new CharSequence[] { cf.accessfromfile(1, 43, 2) });
+	   
+	    SixMPRD3.sendKeys(new CharSequence[] { cf.accessfromfile(1, 44, 2) });
+	   
+	    SubsComplMSCMDate.sendKeys(new CharSequence[] { cf.accessfromfile(1, 52, 2) });
+	    
+	    Provisionofdeferredconnectionagreementsdate.sendKeys(new CharSequence[] { cf.accessfromfile(1, 53, 2) }); 
+	    
+	    ProvDefTECD.sendKeys(new CharSequence[] { cf.accessfromfile(1, 54, 2) }); 
+	    
+	    BasePeriod.sendKeys(new CharSequence[] { cf.accessfromfile(1, 55, 2) }); 
+	    
+	    Select status = new Select(dropdownstatus);
+	    status.selectByVisibleText("Active");
+	    
+	    driver.switchTo().defaultContent();
+	    
+	    //Pop up click
+	    
+	    popupsave.click();
+	    
+	    Thread.sleep(2000L);
+	    
+	    driver.switchTo().frame(2);
+	    
+	    save.click();
 	
-		
-		
+	    
 	}
 	
 	
-	
+	public void VerifyAuctionCreated(WebDriver driver) throws InterruptedException, IOException
+	{
+		Auctiontitleheader.click();
+		Thread.sleep(12000L);
+		
+		ShowFilterChoices.click();
+		
+		Thread.sleep(4000L);
+		
+		System.out.println("3.1 run");
+		
+		Select status = new Select(FilterLinkTitle);
+	    status.selectByVisibleText(cf.accessfromfile(1, 0, 2) );
+	}
 	
 	
 	

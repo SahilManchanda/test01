@@ -1,11 +1,23 @@
 package com.emr.qa.pages;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class EmrDbhomepage {
+import com.emr.qa.base.TestBase;
+
+public class EmrDbhomepage extends TestBase{
 	
-	
+		public  EmrDbhomepage() {
+		
+		PageFactory.initElements(driver, this);
+		
+	}
+		
 	//Db User Top Panel
 	
 	@FindBy(xpath="//a[contains(text(), \"My EMR\")]")
@@ -131,7 +143,7 @@ public class EmrDbhomepage {
 		@FindBy(xpath=" //a[contains(text(), \"Technology Class\")]")
 		WebElement TechnologyClasscollapsed;
 
-		@FindBy(xpath="//a[contains(text(), \"Auction Setup\")]")
+		@FindBy(xpath="/html/body/form/div[6]/div/div[3]/table/tbody/tr/td[1]/div/div/ul[2]/li[8]/ul/li[3]/div[1]/a")
 		WebElement AuctionSetupcollapsed;
 		
 		@FindBy(xpath="//a[contains(text(), \"My Auctions\")]")
@@ -188,9 +200,13 @@ public class EmrDbhomepage {
 		 
 		//Methods
 		
-		Auctionpage Navigatetoauctionsetup() {
-		
+		 public Auctionpage Navigatetoauctionsetup() throws InterruptedException {
+			 Thread.sleep(4000);
+			 
 			CapacityMarketsidecision.click();	
+			WebDriverWait wait = new WebDriverWait(driver, 20);
+
+			wait.until(ExpectedConditions.visibilityOf(AuctionSetupcollapsed));
 			AuctionSetupcollapsed.click();
 			return new Auctionpage();
 	
