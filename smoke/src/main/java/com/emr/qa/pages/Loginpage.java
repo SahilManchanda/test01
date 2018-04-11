@@ -82,12 +82,12 @@ public class Loginpage extends TestBase{
 		
 	}  
 	
-	public Homepage Loginuser(String un, String pswd) {
-		System.out.println("1.1 run");
+	public void Loginuser(String un, String pswd) {
+		
 		loginhomepage.click();
-		System.out.println("1.2 run");
+		
 		username.sendKeys(un);
-		System.out.println("1.3 run");
+	
 		password.sendKeys(pswd);
 		
 		Login.click();
@@ -96,7 +96,7 @@ public class Loginpage extends TestBase{
 		
 		btnSMS.click();
 		
-		return new Homepage();
+		
 		
 	   }
 	 

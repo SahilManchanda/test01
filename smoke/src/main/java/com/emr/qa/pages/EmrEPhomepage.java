@@ -2,8 +2,17 @@ package com.emr.qa.pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
-public class EmrEPhomepage {
+import com.emr.qa.base.TestBase;
+
+	public class EmrEPhomepage extends TestBase {
+	
+	public  EmrEPhomepage() {
+		
+		PageFactory.initElements(driver, this);
+		
+	}
 	
 	// My EMR EP User Center Panel
 	
@@ -14,6 +23,7 @@ public class EmrEPhomepage {
 	WebElement Myagreement;
 	
 	@FindBy(xpath="//a[@href='/cmus']")
+	
 	WebElement Mycmu;
 	
 	@FindBy(xpath="//a[@href='/my-disputes']")
@@ -37,6 +47,31 @@ public class EmrEPhomepage {
 	@FindBy(xpath="//a[@href='/agreementTrades']")
 	WebElement MyTrades;
 	
+	
+	
+	
+	
+	//Methods 
+	public void Mycmuclick() {
+		
+		
+		
+		Mycmu.click();
+		
+		
+	}
+	
+	public void MyApplicationclick() {
+		
+		
+		
+		Myapplication.click();
+		
+		
+	}
+	
+	
+
 	
 	
 	

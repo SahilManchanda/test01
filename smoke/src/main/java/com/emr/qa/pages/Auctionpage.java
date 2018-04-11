@@ -2,7 +2,6 @@ package com.emr.qa.pages;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -23,7 +22,6 @@ public class Auctionpage extends TestBase {
 		PageFactory.initElements(driver, this);
 		
 	}
-	
 	
 	
 	EmrDbhomepage emrhomepage;
@@ -498,36 +496,5 @@ public class Auctionpage extends TestBase {
 		Select status = new Select(FilterLinkTitle);
 	    status.selectByVisibleText(cf.accessfromfile(1, 0, 2) );
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-	
 	
 }

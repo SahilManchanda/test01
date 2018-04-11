@@ -7,6 +7,10 @@ import org.openqa.selenium.support.PageFactory;
 
 public class Homepage extends TestBase {
 
+	public Homepage() {
+		
+		PageFactory.initElements(driver, this);	
+	}
 	
 
 	@FindBy(xpath="//a[contains(text(), \"Home\")]")
@@ -28,8 +32,24 @@ public class Homepage extends TestBase {
 	WebElement ContactUs;
 	
 	
-	public Homepage() {
-		
-		PageFactory.initElements(driver, this);	
-	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }

@@ -90,7 +90,7 @@ public class AuctionPageTest extends TestBase {
 	
 	
 	
-	//@AfterMethod
+	@AfterMethod
 	public void teardown() {
 		driver.quit();
 	}

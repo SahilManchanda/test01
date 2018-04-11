@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.emr.qa.testcases.AuctionPageTest">
+      <class name="com.emr.qa.testcases.ApplicatoncreationTest">
         <methods>
+          <include name="ApplicationsaveTest"/>
           <include name="setUp"/>
-          <include name="VerifyAuctionCreatedTest"/>
         </methods>
-      </class> <!-- com.emr.qa.testcases.AuctionPageTest -->
+      </class> <!-- com.emr.qa.testcases.ApplicatoncreationTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
