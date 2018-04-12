@@ -272,7 +272,7 @@ public class EpApplicationcreation extends TestBase {
 	
 	//Methods
 	
-	//Application creation
+	// Existing Generating Application creation
 	
 
 	public void applicationcreation() throws InterruptedException {
@@ -313,7 +313,7 @@ public class EpApplicationcreation extends TestBase {
 		return EXGAuctiontext.isDisplayed();
 		}
 	
-	public void Applcationsave() throws InterruptedException, IOException {
+	public void EXGApplicationsave() throws InterruptedException, IOException {
 		
 		Actions actions = new Actions(driver);
 		actions.moveToElement(Add_new_Application_button);
@@ -418,5 +418,8 @@ public class EpApplicationcreation extends TestBase {
 		Applicationsubmitbutton.click();
 		ApplicationSAVE_Submityesbutton.click();
 	}
+	
+	
+	
 	
 }

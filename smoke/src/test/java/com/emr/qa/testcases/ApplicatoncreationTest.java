@@ -75,7 +75,7 @@ public class ApplicatoncreationTest  extends TestBase {
 		login.Loginuser("am1a.mainadmin","Passw01!");
 		driver.switchTo().frame("MSOPageViewerWebPart_WebPartWPQ2");
 		EPhomepage.MyApplicationclick();
-		applicationpage.Applcationsave();
+		applicationpage.EXGApplicationsave();
 		applicationpage.Saveclick();
 	}
 	
@@ -86,7 +86,7 @@ public class ApplicatoncreationTest  extends TestBase {
 		login.Loginuser("am1a.mainadmin","Passw01!");
 		driver.switchTo().frame("MSOPageViewerWebPart_WebPartWPQ2");
 		EPhomepage.MyApplicationclick();
-		applicationpage.Applcationsave();
+		applicationpage.EXGApplicationsave();
 		applicationpage.Submitclick();
 	}
 	

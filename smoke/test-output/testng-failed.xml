@@ -5,7 +5,7 @@
     <classes>
       <class name="com.emr.qa.testcases.ApplicatoncreationTest">
         <methods>
-          <include name="ApplicationsaveTest"/>
+          <include name="ApplicationsubmitTest"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- com.emr.qa.testcases.ApplicatoncreationTest -->
