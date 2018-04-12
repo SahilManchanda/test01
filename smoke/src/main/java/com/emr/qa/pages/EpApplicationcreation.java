@@ -3,6 +3,7 @@ package com.emr.qa.pages;
 import java.io.IOException;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
@@ -20,7 +21,8 @@ public class EpApplicationcreation extends TestBase {
 	}
 	
 	Commonfunction cf= new Commonfunction();
-	
+	JavascriptExecutor js = (JavascriptExecutor) driver;
+
 	// Add new Application Button
 	
 	@FindBy(xpath = "//div[@class=\"add-new-application-button\"]")
@@ -80,7 +82,7 @@ public class EpApplicationcreation extends TestBase {
 	
 	//Company and CMU Summary Page
 	
-	@FindBy(xpath = "//a[id=\"ui-id-3\"]")
+	@FindBy(xpath = "//a[@id=\"ui-id-3\"]")
 	WebElement EXGCompanyandCMUSummaryPage;
 	
 	
@@ -93,19 +95,19 @@ public class EpApplicationcreation extends TestBase {
 	WebElement EXGApplicationstatus;
 	
 	//Application Declaration	
-	@FindBy(xpath = "//input[@id=\"select2-Sections[18].Questions[53].SelectedValue-container\"]")
+	@FindBy(xpath = "//input[@id=\"Sections[18].Questions[53].SelectedValue\"]")
 	WebElement EXGApplicationDeclaration;
 	
 	//Aggregator Declaration
-	@FindBy(xpath = "//input[@id=\"select2-Sections[18].Questions[54].SelectedValue-container\"]")
+	@FindBy(xpath = "//input[@id=\"Sections[18].Questions[54].SelectedValue\"]")
 	WebElement EXGAggregatorDeclaration;
 	
 	//Legal Owner declaration
-	@FindBy(xpath = "//input[@id=\"select2-Sections[18].Questions[55].SelectedValue-container\"]")
+	@FindBy(xpath = "//input[@id=\"Sections[18].Questions[55].SelectedValue\"]")
 	WebElement EXGLegalOwnerDeclaration;
 		
 	//Joint Owner Declaration	
-	@FindBy(xpath = "//input[@id=\"select2-Sections[18].Questions[56].SelectedValue-container\"]")
+	@FindBy(xpath = "//input[@id=\"Sections[18].Questions[56].SelectedValue\"]")
 	WebElement EXGJointOwnerDeclaration;
 	
 	//Primary Fuel Type *
@@ -128,7 +130,7 @@ public class EpApplicationcreation extends TestBase {
 	
 	//Historic Performance Period 1 Settlement Period 
 		@FindBy(xpath = "//input[@id=\"Sections[19].Questions[65].SelectedValue\"]")
-		WebElement EXGHistoricperiod1settlementcapacity;
+		WebElement EXGHistoricperiod1settlementperiod;
 		
 	//Historic Performance Period 2 Date (DD/MM/YYYY) *
 		@FindBy(xpath = "//input[@id=\"Sections[19].Questions[66].SelectedValue\"]")
@@ -137,6 +139,11 @@ public class EpApplicationcreation extends TestBase {
 	//Historic Performance Period 2 Delivered Capacity *
 		@FindBy(xpath = "//input[@id=\"Sections[19].Questions[67].SelectedValue\"]")
 		WebElement EXGHistoricPerformancePeriod2DeliveredCapacity;	
+	
+	//Historic Performance Period 2 Settlement Period *
+	@FindBy(xpath = "//input[@id=\"Sections[19].Questions[68].SelectedValue\"]")
+	WebElement EXGHistoricPerformancePeriod2SettlementPeriod;		
+		
 		
 	//Historic Performance Period 3 Date (DD/MM/YYYY) *
 		@FindBy(xpath = "//input[@id=\"Sections[19].Questions[69].SelectedValue\"]")
@@ -167,6 +174,10 @@ public class EpApplicationcreation extends TestBase {
 		@FindBy(xpath = "//input[@id=\"Sections[19].Questions[75].SelectedValue\"]")
 		WebElement EXGConfirmationofLineLossFactors;
 	
+		
+		
+		
+		
 	//	Declaration of Solvency *
 		@FindBy(xpath = "//input[@id=\"Sections[20].Questions[57].SelectedValue\"]")
 		WebElement EXGDeclarationofSolvency;
@@ -200,11 +211,11 @@ public class EpApplicationcreation extends TestBase {
 		WebElement  EXGAcknowledgeLowCarbonExclusionStatus;
 		
 	//  STOR No Current contract and not the relevant year	
-		@FindBy(xpath = "//input[@id=\"Sections[21].Questions[76].SelectedValue\"]")
+		@FindBy(xpath = "//input[@id=\"Sections[22].Questions[76].SelectedValue\"]")
 		WebElement  EXGSTORNoCurrentcontractandnottherelevantyear;	
 		
 	//  STOR Subject of Contract but to Withdraw
-		@FindBy(xpath = "//input[@id=\"Sections[21].Questions[77].SelectedValue\"]")
+		@FindBy(xpath = "//input[@id=\"Sections[22].Questions[77].SelectedValue\"]")
 		WebElement  EXGSTORSubjectofContractbuttoWithdraw;
 		
 	//  Conduct - No Market Manipulation *
@@ -236,8 +247,18 @@ public class EpApplicationcreation extends TestBase {
 		WebElement  EXGMPANDeclaration;
 		
 		
+	//  Application Save Button	
+		@FindBy(xpath = "//input[@value=\"Save\"]")
+		WebElement  Applicationsavebutton;
+		
+	//  Application Save Button	
+		@FindBy(xpath = "//input[@value=\"Submit\"]")
+		WebElement  Applicationsubmitbutton;	
 		
 		
+	// Application Final Save
+		@FindBy(xpath = "//span[text()=\"Yes\"]")
+		WebElement  ApplicationSAVE_Submityesbutton;
 		
 		
 		
@@ -308,6 +329,7 @@ public class EpApplicationcreation extends TestBase {
 		Searchfield.sendKeys("sm12f8");
 		Highlightedcmu.click();
 		
+		Thread.sleep(4000);
 		SelectAuction.click();
 		Searchfield.sendKeys("05Mare2e");
 		HighlightedAuction.click();
@@ -328,49 +350,73 @@ public class EpApplicationcreation extends TestBase {
 		
 		
 		//navigate to Application page
-		
+		Thread.sleep(2000);
+
 		EXGApplication_Page.click();
-		
 		//Historic Dates
-		
-		EXGHistoricperiod1date.sendKeys(cf.accessfromfile(3, 1, 2));
-		EXGHistoricperiod1deliverycapacity.sendKeys(cf.accessfromfile(3, 1, 2));
-		EXGHistoricperiod1settlementcapacity.sendKeys(cf.accessfromfile(3, 1, 2));
-		EXGHistoricPerformancePeriod2Date.sendKeys(cf.accessfromfile(3, 1, 2));
-		EXGHistoricPerformancePeriod2DeliveredCapacity.sendKeys(cf.accessfromfile(3, 1, 2));
-		EXGHistoricPerformancePeriod3Date.sendKeys(cf.accessfromfile(3, 1, 2));
-		EXGHistoricPerformancePeriod3DeliveredCapacity.sendKeys(cf.accessfromfile(3, 1, 2));
-		EXGHistoricPerformancePeriod3SettlementPeriod.sendKeys(cf.accessfromfile(3, 1, 2));
-		EXGStartofDateRangeforHistoricPerformanceData.sendKeys(cf.accessfromfile(3, 1, 2));
-		EXGEndofDateRangeforHistoricPerformanceData.sendKeys(cf.accessfromfile(3, 1, 2));
-		
-		
+	
+		js.executeScript("arguments[0].value='03/04/2018';", EXGHistoricperiod1date);
+		js.executeScript("arguments[0].value='30';", EXGHistoricperiod1deliverycapacity);
+		js.executeScript("arguments[0].value='30';", EXGHistoricperiod1settlementperiod);
+		js.executeScript("arguments[0].value='03/04/2018';", EXGHistoricPerformancePeriod2Date);
+		js.executeScript("arguments[0].value='30';", EXGHistoricPerformancePeriod2DeliveredCapacity);
+		js.executeScript("arguments[0].value='30';", EXGHistoricPerformancePeriod2SettlementPeriod);
+		js.executeScript("arguments[0].value='03/04/2018';", EXGHistoricPerformancePeriod3Date);
+		js.executeScript("arguments[0].value='30';", EXGHistoricPerformancePeriod3DeliveredCapacity);
+		js.executeScript("arguments[0].value='30';", EXGHistoricPerformancePeriod3SettlementPeriod);
+		js.executeScript("arguments[0].value='03/04/2018';", EXGStartofDateRangeforHistoricPerformanceData);
+		js.executeScript("arguments[0].value='03/04/2018';", EXGEndofDateRangeforHistoricPerformanceData);
 		EXGConfirmationofHistoricMeteredOutput.sendKeys(System.getProperty("user.dir") + "/test.txt");
-		
+		EXGConfirmationofLineLossFactors.sendKeys(System.getProperty("user.dir") + "/test.txt");
+		js.executeScript("window.scrollBy(0,1000)", "EXGDeclarationofSolvency");
+		Thread.sleep(1500);
 		EXGDeclarationofSolvency.click();
+		js.executeScript("window.scrollBy(0,250)", "EXGAcknowledgeLowCarbonExclusionStatus");
+		Thread.sleep(1500);
 		EXGLCEApplicationmadebutnotDetermined.click();
-		EXGLCEWithdrawalDocument.click();
+		EXGLCEWithdrawalDocument.sendKeys(System.getProperty("user.dir") + "/test.txt");
+		Thread.sleep(2000);
 		EXGLCECurrentBenefitbutnotRelevantYear.click();
-		EXGLCETermdocumentorLCENonSupportdocument.click();
+		EXGLCETermdocumentorLCENonSupportdocument.sendKeys(System.getProperty("user.dir") + "/test.txt");
+		js.executeScript("window.scrollBy(0,250)", "EXGAcknowledgeLowCarbonExclusionStatus");
+		Thread.sleep(1500);
 		EXGLCENoCurrentBenefitandnotRelevantYear.click();
 		EXGLowCarbonGrantStatus.click();
+		js.executeScript("window.scrollBy(0,250)", "EXGAcknowledgeLowCarbonExclusionStatus");
+		Thread.sleep(1500);
 		EXGAcknowledgeLowCarbonExclusionStatus.click();
 		EXGSTORNoCurrentcontractandnottherelevantyear.click();
 		EXGSTORSubjectofContractbuttoWithdraw.click();
 		EXGConductNoMarketManipulation.click();
+		js.executeScript("window.scrollBy(0,250)", "EXGConductNoInformationdisclosure");
+		Thread.sleep(1500);
 		EXGConductCompliedwithalllaws.click();
 		EXGConductNooffertopayanyofficer.click();
-		EXGConductNobreachoftheBriberyAct2010.click();
+		js.executeScript("window.scrollBy(0,250)", "EXGMPANDeclaration");
+		Thread.sleep(1500);
+		EXGConductNobreachoftheBriberyAct2010.click();		
 		EXGConductNoInformationdisclosure.click();
 		EXGDeclarationthatApplicationiscorrect.click();
-		EXGMPANDeclaration.click();
+		js.executeScript("window.scrollBy(0,250)", "EXGConductNoInformationdisclosure");
+		Thread.sleep(1500);
+		EXGMPANDeclaration.sendKeys("Text1");
+		js.executeScript("window.scrollBy(0,650)", "");
+		Applicationsavebutton.click();
 		
-		
-		
-		
-		
-		
+		ApplicationSAVE_Submityesbutton.click();
+	
 	}
 	
+	public void Saveclick() {
+
+		Applicationsavebutton.click();
+		ApplicationSAVE_Submityesbutton.click();		
+	}
+	
+	public void Submitclick() {
+			
+		Applicationsubmitbutton.click();
+		ApplicationSAVE_Submityesbutton.click();
+	}
 	
 }

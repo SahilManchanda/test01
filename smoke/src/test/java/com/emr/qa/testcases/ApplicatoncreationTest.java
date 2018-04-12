@@ -76,8 +76,19 @@ public class ApplicatoncreationTest  extends TestBase {
 		driver.switchTo().frame("MSOPageViewerWebPart_WebPartWPQ2");
 		EPhomepage.MyApplicationclick();
 		applicationpage.Applcationsave();
+		applicationpage.Saveclick();
 	}
 	
+	@Test
+	void ApplicationsubmitTest() throws InterruptedException, IOException {
+		
+		
+		login.Loginuser("am1a.mainadmin","Passw01!");
+		driver.switchTo().frame("MSOPageViewerWebPart_WebPartWPQ2");
+		EPhomepage.MyApplicationclick();
+		applicationpage.Applcationsave();
+		applicationpage.Submitclick();
+	}
 	
 	
 	
