@@ -2,6 +2,8 @@ package com.emr.qa.pages;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -359,9 +361,13 @@ public class Auctionpage extends TestBase {
 		wait.until(ExpectedConditions.visibilityOf(newitem));
 		
 		newitem.click();
+		int size = driver.findElements(By.tagName("iframe")).size();
+		System.out.println(size);
 		
-		
+		Thread.sleep(3000);
 		driver.switchTo().frame(2);
+		
+		Thread.sleep(3000);
 		 
 		AuctionTitle.sendKeys(new CharSequence[] { cf.accessfromfile(1, 0, 2) });
 		

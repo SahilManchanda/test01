@@ -1,5 +1,7 @@
 package com.emr.qa.testcases;
 
+import java.io.IOException;
+
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -8,8 +10,10 @@ import org.testng.annotations.Test;
 import com.emr.qa.base.TestBase;
 import com.emr.qa.pages.Homepage;
 import com.emr.qa.pages.Loginpage;
+import com.emr.qa.util.Commonfunction;
 
 public class LoginPageTest extends TestBase {
+	Commonfunction cf;
 	Loginpage login;
 	Homepage  homepage;
 	public LoginPageTest() {		
@@ -21,6 +25,7 @@ public class LoginPageTest extends TestBase {
 	
 		initialization();
 		login = new Loginpage(); 
+		cf= new Commonfunction();
 		
 	}
 	
@@ -46,9 +51,9 @@ public class LoginPageTest extends TestBase {
 
 		
 	@Test	
-	public void LoginTest() {
+	public void LoginTest() throws IOException {
 	
-	login.Loginuser("am1a.mainadmin","Passw01!");
+	login.Loginuser(cf.accessfromfile(0, 1, 1),cf.accessfromfile(0, 2, 1));
 
 	}
 	

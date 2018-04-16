@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\IBM_ADMIN\AppData\Local\Temp\testng-eclipse--602835557\testng-customsuite.xml</span>
+                    <span>C:\Users\IBM_ADMIN\AppData\Local\Temp\testng-eclipse--349891248\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -102,7 +102,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.emr.qa.testcases.ApplicatoncreationTest" hash-for-method="ApplicationsubmitTest">ApplicationsubmitTest</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.emr.qa.testcases.Application_Db_AssessmentTest" hash-for-method="EXGapplicationassessmentSAVE">EXGapplicationassessmentSAVE</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -120,23 +120,25 @@
           <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">com.emr.qa.testcases.ApplicatoncreationTest</span>
+              <span class="class-name">com.emr.qa.testcases.Application_Db_AssessmentTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="ApplicationsubmitTest">
-                  </a> <!-- ApplicationsubmitTest -->
-                  <span class="method-name">ApplicationsubmitTest</span>
-                  <div class="stack-trace">org.openqa.selenium.WebDriverException: unknown error: Element &lt;input type=&quot;button&quot; id=&quot;btn-submit&quot; value=&quot;Submit&quot;&gt; is not clickable at point (215, 566). Other element would receive the click: &lt;div class=&quot;ui-widget-overlay ui-front&quot; style=&quot;z-index: 101;&quot;&gt;&lt;/div&gt;
+                  <a name="EXGapplicationassessmentSAVE">
+                  </a> <!-- EXGapplicationassessmentSAVE -->
+                  <span class="method-name">EXGapplicationassessmentSAVE</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[text()=&quot;Save&quot;]&quot;}
   (Session info: chrome=65.0.3325.181)
   (Driver info: chromedriver=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;
-System info: host: &apos;IBM924-PC05NTJG&apos;, ip: &apos;9.193.7.88&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_131&apos;
+System info: host: &apos;IBM924-PC05NTJG&apos;, ip: &apos;9.78.194.141&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_131&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
 Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.36.540470 (e522d04694c7eb..., userDataDir: C:\Users\IBM_AD~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 65.0.3325.181, webStorageEnabled: true}
-Session ID: 14c66b48c30d1b98d9f6adb33bd9912f
+Session ID: 61bc5a3d2a4e280b8d80bf1c43047ed4
+*** Element info: {Using=xpath, value=//span[text()=&quot;Save&quot;]}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -149,15 +151,15 @@ Session ID: 14c66b48c30d1b98d9f6adb33bd9912f
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:279)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
-	at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:421)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:311)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
 	at com.sun.proxy.$Proxy8.click(Unknown Source)
-	at com.emr.qa.pages.EpApplicationcreation.Submitclick(EpApplicationcreation.java:418)
-	at com.emr.qa.testcases.ApplicatoncreationTest.ApplicationsubmitTest(ApplicatoncreationTest.java:90)
+	at com.emr.qa.pages.Application_Db_Assessment.EXGDbAssessment_stage_1(Application_Db_Assessment.java:1310)
+	at com.emr.qa.testcases.Application_Db_AssessmentTest.EXGapplicationassessmentSAVE(Application_Db_AssessmentTest.java:57)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -192,7 +194,7 @@ Session ID: 14c66b48c30d1b98d9f6adb33bd9912f
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\IBM_ADMIN\AppData\Local\Temp\testng-eclipse--602835557\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\IBM_ADMIN\AppData\Local\Temp\testng-eclipse--349891248\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -201,11 +203,11 @@ Session ID: 14c66b48c30d1b98d9f6adb33bd9912f
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
   &lt;test thread-count=&quot;5&quot; verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.emr.qa.testcases.ApplicatoncreationTest&quot;&gt;
+      &lt;class name=&quot;com.emr.qa.testcases.Application_Db_AssessmentTest&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;ApplicationsubmitTest&quot;/&gt;
+          &lt;include name=&quot;EXGapplicationassessmentSAVE&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- com.emr.qa.testcases.ApplicatoncreationTest --&gt;
+      &lt;/class&gt; &lt;!-- com.emr.qa.testcases.Application_Db_AssessmentTest --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -247,14 +249,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'ApplicationsubmitTest')
-data.setCell(0, 2, 'com.emr.qa.testcases.ApplicatoncreationTest')
-data.setCell(0, 3, 87301);
+data.setCell(0, 1, 'EXGapplicationassessmentSAVE')
+data.setCell(0, 2, 'com.emr.qa.testcases.Application_Db_AssessmentTest')
+data.setCell(0, 3, 167871);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 2 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -269,22 +271,9 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">4 ignored methods</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">com.emr.qa.testcases.ApplicatoncreationTest</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">verifyApplicationcompanyTest</span>
-                <br/>
-                <span class="ignored-method-name">verifyApplicationcmuTest</span>
-                <br/>
-                <span class="ignored-method-name">createapplicationTest</span>
-                <br/>
-                <span class="ignored-method-name">ApplicationsaveTest</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Default_suite" class="panel">
@@ -293,7 +282,7 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.emr.qa.testcases.ApplicatoncreationTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.emr.qa.testcases.Application_Db_AssessmentTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
                 <span class="method-start">0 ms</span>
@@ -301,8 +290,8 @@ return data;
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">ApplicationsubmitTest</span>
-                <span class="method-start">6920 ms</span>
+                <span class="method-name">EXGapplicationassessmentSAVE</span>
+                <span class="method-start">8044 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

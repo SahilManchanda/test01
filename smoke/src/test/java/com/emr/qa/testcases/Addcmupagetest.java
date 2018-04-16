@@ -83,9 +83,9 @@ import com.emr.qa.util.Commonfunction;
 		
 		//Select the CMU Type
 		
-		Addcmuobj.AddCMU("NewBuildInterconnector");
+		Addcmuobj.AddCMU("NewBuildGenerating");
 		Addcmuobj.NBGCMUtypecreation();
-		Addcmuobj.NBIconstructionplan();
+		Addcmuobj.NBGconstructionplan();
 		Addcmuobj.NBITabswitch();
 		System.out.println("1A");
 		Addcmuobj.NBGMeteringnotdeferred();
@@ -212,28 +212,7 @@ import com.emr.qa.util.Commonfunction;
      		Assert.assertTrue(flag);
      		
      	}
-     	
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
+     	         
      	
 	//@AfterMethod
 	public void teardown() {

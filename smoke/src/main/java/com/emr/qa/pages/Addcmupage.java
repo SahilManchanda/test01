@@ -276,22 +276,22 @@ public class Addcmupage extends TestBase {
 	// Metering Assessment
 
 		// Defer CMU Metering Assessment For Settlement
-		@FindBy(xpath = "//input[@name=\"Sections[8].Questions[16].SelectedValue\" and @value =\"Yes\"]")
+		@FindBy(xpath = "//input[@name=\"Sections[8].Questions[15].SelectedValue\" and @value =\"Yes\"]")
 		WebElement NBGDeferCMUMeteringAssessmentForSettlementYesRadioBox;
 
 		// Defer CMU Metering Assessment For Settlement
-		@FindBy(xpath = "//input[@name=\"Sections[8].Questions[16].SelectedValue\" and @value =\"No\"]")
+		@FindBy(xpath = "//input[@name=\"Sections[8].Questions[15].SelectedValue\" and @value =\"No\"]")
 		WebElement NBGDeferCMUMeteringAssessmentForSettlementNoRadioBox;
 
-		// Interconnector Associated Load *
+		// Other generation Onsite*
 
 		
-		@FindBy(xpath = "//input[@name=\"Sections[8].Questions[26].SelectedValue\" and @value =\"No\"]")
-		WebElement NBGInterconnectorAssociatedLoadNotRadionbox;
+		@FindBy(xpath = "//input[@name=\"Sections[8].Questions[21].SelectedValue\" and @value =\"No\"]")
+		WebElement NBG_OthergenerationNotRadionbox;
 
 		
-		@FindBy(xpath = "//input[@name=\"Sections[8].Questions[26].SelectedValue\" and @value =\"Yes\"]")
-		WebElement NBGInterconnectorAssociatedLoadYesRadionbox;
+		@FindBy(xpath = "//input[@name=\"Sections[8].Questions[21].SelectedValue\" and @value =\"Yes\"]")
+		WebElement NBG_OthergenerationYesRadionbox;
 
 		// Single Line Diagram
 		@FindBy(xpath = "//input[@name=\"Sections[4].Questions[13].SelectedValue\"]")
@@ -900,7 +900,7 @@ public class Addcmupage extends TestBase {
 		Meteringdeferredpage.click();
 	}
 
-	public void constructionplan() throws InterruptedException {
+	public void NBGconstructionplan() throws InterruptedException {
 
 		ConstructionPlantab.click();
 
@@ -954,7 +954,7 @@ public class Addcmupage extends TestBase {
 		NBGDeferCMUMeteringAssessmentForSettlementNoRadioBox.click();
 		js.executeScript("javascript:window.scrollBy(0,450)");
 		Thread.sleep(2000);
-		NBGInterconnectorAssociatedLoadNotRadionbox.click();
+		NBG_OthergenerationNotRadionbox.click();
 		js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
 		NBGSingleLineDiagram_upload.sendKeys(System.getProperty("user.dir") + "/test.txt");
 		NBGOtherMeteringInformation_upload.sendKeys(System.getProperty("user.dir") + "/test.txt");
